@@ -17,3 +17,17 @@ if(navClose){
         navClose.classList.add('disable')
     })
 }
+
+show = false;
+
+const itemDiv = document.querySelectorAll('.item__img__container')
+itemDiv.forEach(n => n.addEventListener('click', () => {
+    const test = document.getElementsByClassName(n.id)
+    if(show){
+        test[0].classList.remove('visible')
+        show = false
+    }else{
+        test[0].classList.add('visible')
+        show = true
+    }
+}))
