@@ -82,6 +82,7 @@ a{
     width: 100vw;
     height: 100vh;
     background-image: url('land_image.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -124,6 +125,10 @@ a{
         /* background-color: aqua; */
         border-right: 2px solid var(--color-green);
         transition: top .7s;
+    }
+
+    .footer{
+        align-items: center;
     }
 }
 
@@ -280,19 +285,17 @@ a{
 .destination{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
+    justify-content: center;
+    margin-bottom: 5rem;
 }
 
 .destination__header{
 }
 
 .destination__list{
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     gap: 3rem;
 }
 
@@ -419,6 +422,57 @@ a{
     max-width: 100%;
 }
 
+.newslatter{
+    
+}
+
+.news__form{
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+    flex-wrap: wrap;
+}
+
+#femail{
+    padding: .5rem;
+    border-radius: 15px;
+    border: 2px solid #006A4E;
+}
+
+#fsubmit{
+    padding: .8rem 3rem;
+    border-radius: 15px;
+    background-color: var(--color-green);
+    border: none;
+    color: var(--color-white);
+    font-weight: var(--font-bold);
+}
+
+.footer{
+    width: 100vw;
+    background-color: var(--color-green);
+    padding: 4rem 6rem 6rem 8rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+}
+
+.footer__header{
+    color: var(--color-white);
+}
+
+.footer__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+}
+
+.footer__item li{
+    color: var(--color-white);
+    font-weight: var(--font-bold);
+    margin-bottom: 2rem;
+}
+
 @media screen and (min-width: 1023px) {
     .section__header{
         text-align: left;
@@ -440,6 +494,16 @@ a{
     .main__button{
         font-size: var(--big-font-size);
         padding: 15px 60px;
+    }
+
+    .destination{
+        justify-content: space-evenly;
+        height: 100vh;
+        margin-bottom: 0rem;
+    }
+
+    .item__img__container{
+        height: 550px
     }
 
     .item__img__container i{
@@ -472,9 +536,20 @@ a{
         flex-direction: row;
     }
 
+    #femail{
+        width: 400px;
+        text-align: left;
+    }
+
+    #fsubmit{
+
+    }
+    
     .footer{
-        width: 100vw;
-        height: 500px;
-        background-color: var(--color-green);
+    }
+
+    .footer__list{
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 }
